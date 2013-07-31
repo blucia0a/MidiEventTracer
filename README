@@ -28,3 +28,11 @@ Usage: unarch <mMon file> [mode = t|f]
 mode is options.  When mode is 't', MidiEventTracer will print tone names (like
 C#3).  When mode is 'f', MidiEventTracer will print tone frequencies (like
 166.345980).
+
+
+Miscellaneous
+---------------
+generate_chango_tuning.pl generates a file that contains 25 tones.  It works by
+removing octave identifiers, then extrapolating from the existing tones to
+populate a list of 25 tones, spanning 5 octaves (at most) when that is
+possible. 
