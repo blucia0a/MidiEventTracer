@@ -2,4 +2,29 @@ github.com/blucia0a/MidiEventTracer
 
 Based off of https://github.com/krevis/MIDIApps
 
+Installation
+-------------------
+1)Install snoize MIDI Monitor: http://www.snoize.com/MIDIMonitor/
+  -The SnoizeMIDI Framework is all that is needed from this package to build MidiEventTracer
+  -MIDI Monitor runs, you can save voice event traces in the MIDI Monitor format
+2)Get the source code from here by cloning this project https://github.com/krevis/MIDIApps
+  -$git clone https://github.com/krevis/MIDIApps.git
+3)Manually adjust paths in the Makefile to point it to the framework path 
+  and the headers in the cloned repo
+4)make
+5)There should be a binary called "unarch".
 
+
+Using
+----------
+1)Save a MIDI file in MIDI Monitor (blah.mMon)
+2)Run unarch on blah.mMon
+
+
+Options
+------------
+Usage: unarch <mMon file> [mode = t|f]
+
+mode is options.  When mode is 't', MidiEventTracer will print tone names (like
+C#3).  When mode is 'f', MidiEventTracer will print tone frequencies (like
+166.345980).
